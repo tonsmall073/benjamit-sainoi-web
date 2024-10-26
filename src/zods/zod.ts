@@ -6,6 +6,13 @@ import { makeZodI18nMap } from 'zod-i18n-map'
 import { z } from 'zod'
 import { getLocale } from '@/locales/dictionary'
 
+const th = i18next.createInstance()
+th.init({
+  lng: 'th',
+  resources: {
+    zh: { zod: zhTranslation },
+  },
+})
 const ja = i18next.createInstance()
 ja.init({
   lng: 'ja',
@@ -31,13 +38,12 @@ zh.init({
 })
 
 const zodMap = {
+  th: makeZodI18nMap({ t: th.t }),
   en: makeZodI18nMap({ t: en.t }),
   ja: makeZodI18nMap({ t: ja.t }),
   zh: makeZodI18nMap({ t: zh.t }),
 }
 
-// Set zod error map by user's locale.
-// The error message should be translated based on user's locale.
 z.setErrorMap((err, ctx) => zodMap[getLocale()](err, ctx))
 
 export { z }

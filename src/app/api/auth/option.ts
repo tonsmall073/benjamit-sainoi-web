@@ -1,7 +1,8 @@
-import { Awaitable, NextAuthOptions, User } from 'next-auth'
+import { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { getDictionary } from '@/locales/dictionary'
 import { loginApi } from '@/serviceApis/userApi'
+import axios from 'axios';
 
 export const authOptions: NextAuthOptions = {
   callbacks: {
@@ -27,15 +28,15 @@ export const authOptions: NextAuthOptions = {
         if (!credentials) {
           return null
         }
+
         const { username, password } = credentials
         const resLogin = await loginApi(username, password)
-
-        if (resLogin instanceof Error) {
-          throw new Error(resLogin?.data?.messageDesc)
+        if (axios.isAxiosError(resLogin)) {
+          throw new Error(resLogin?.response?.data?.messageDesc ?? "")
+        } else if (resLogin instanceof Error) {
+          throw new Error(resLogin?.message ?? "")
         }
-
         const dict = await getDictionary()
-
         if (!resLogin?.data?.data?.accessToken) {
           throw new Error(dict?.login?.message?.auth_failed ?? "")
         }

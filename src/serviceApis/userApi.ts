@@ -1,7 +1,7 @@
 
-import { handleAxiosAuthError } from "@/utils/handleAxiosAuthError";
-import axios, { AxiosError, AxiosResponse } from "axios"
-import { getSession, signOut } from 'next-auth/react';
+import { handleAxiosAuthErrorToSignOut } from "@/utils/handleAxiosAuthErrorToSignOut";
+import axios, { AxiosResponse } from "axios"
+import { getSession } from 'next-auth/react';
 
 export const loginApi = async (user: string, pass: string): Promise<AxiosResponse<any, any>> => {
     try {
@@ -20,7 +20,7 @@ export const loginApi = async (user: string, pass: string): Promise<AxiosRespons
     }
 }
 
-export const getProfile = async (): Promise<AxiosResponse<any, any>> =>{
+export const getProfile = async (): Promise<AxiosResponse<any, any>> => {
     try {
         const session = await getSession();
         const accessToken = session?.user?.accessToken;
@@ -28,13 +28,13 @@ export const getProfile = async (): Promise<AxiosResponse<any, any>> =>{
             `${process.env.NEXT_PUBLIC_API_V1_BASE_URL}/user/profile`,
             {
                 headers: {
-                    "Authorization" :`Bearer ${accessToken}`
+                    "Authorization": `Bearer ${accessToken}`
                 }
             }
         )
         return res
     } catch (error: any) {
-        await handleAxiosAuthError(error)
+        await handleAxiosAuthErrorToSignOut(error)
         return error;
     }
 }

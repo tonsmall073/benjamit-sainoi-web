@@ -1,0 +1,330 @@
+{
+    "lang": "th",
+    "login": {
+        "title": "เข้าสู่ระบบ",
+        "description": "เข้าสู่บัญชีของคุณ",
+        "form": {
+            "username": "ชื่อผู้ใช้",
+            "password": "รหัสผ่าน",
+            "submit": "เข้าสู่ระบบ"
+        },
+        "forgot_password": "ลืมรหัสผ่าน?",
+        "signup": {
+            "title": "ลงทะเบียน",
+            "description": "ร้านเบ็ญจมิตร วัสดุก่อสร้าง"
+        },
+        "message": {
+            "auth_failed": "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง"
+        }
+    },
+    "pagination": {
+        "summary": "แสดงผล {{from}} ถึง {{to}} จาก {{total}} รายการ",
+        "rows_per_page": "แถวต่อหน้า"
+    },
+    "signup": {
+        "title": "ลงทะเบียน",
+        "description": "สร้างบัญชีของคุณ",
+        "register_now": "ลงทะเบียนตอนนี้!",
+        "form": {
+            "username": "ชื่อผู้ใช้",
+            "email": "อีเมล",
+            "password": "รหัสผ่าน",
+            "confirm_password": "ยืนยันรหัสผ่าน",
+            "submit": "สร้างบัญชี"
+        }
+    },
+    "action": {
+        "info": "ข้อมูล",
+        "edit": "แก้ไข",
+        "delete": "ลบ",
+        "submit": "ส่ง",
+        "submitting": "กำลังส่ง...",
+        "reset": "รีเซ็ต"
+    },
+    "theme": {
+        "light": "โหมดสว่าง",
+        "dark": "โหมดมืด",
+        "auto": "อัตโนมัติ"
+    },
+    "dashboard": {
+        "featured": {
+            "user": "ผู้ใช้",
+            "income": "รายได้",
+            "conversion_rate": "อัตราการแปลง",
+            "sessions": "เซสชัน",
+            "action": {
+                "action1": "ดำเนินการ",
+                "action2": "ดำเนินการอื่น",
+                "action3": "สิ่งอื่น"
+            }
+        },
+        "traffic": {
+            "title": "การเข้าชม",
+            "duration": "มกราคม - กรกฎาคม 2021",
+            "option": {
+                "day": "วัน",
+                "month": "เดือน",
+                "year": "ปี"
+            },
+            "chart": {
+                "xlabel1": "มกราคม",
+                "xlabel2": "กุมภาพันธ์",
+                "xlabel3": "มีนาคม",
+                "xlabel4": "เมษายน",
+                "xlabel5": "พฤษภาคม",
+                "xlabel6": "มิถุนายน",
+                "xlabel7": "กรกฎาคม"
+            },
+            "users": "ผู้ใช้",
+            "views": "การเข้าชม",
+            "category1": "การเยี่ยมชม",
+            "category2": "เฉพาะ",
+            "category3": "การดูหน้า",
+            "category4": "ผู้ใช้ใหม่",
+            "category5": "อัตราการตีกลับ"
+        },
+        "social": {
+            "facebook": {
+                "label1": "เพื่อน",
+                "label2": "ฟีด"
+            },
+            "twitter": {
+                "label1": "ผู้ติดตาม",
+                "label2": "ทวีต"
+            },
+            "instagram": {
+                "label1": "ผู้ติดต่อ",
+                "label2": "ฟีด"
+            }
+        },
+        "sales": {
+            "title": "การเข้าชมและการขาย",
+            "stats": {
+                "stat1": "ลูกค้าใหม่",
+                "stat2": "ลูกค้าประจำ",
+                "stat3": "การดูหน้า",
+                "stat4": "ออร์แกนิก"
+            },
+            "monday": "วันจันทร์",
+            "tuesday": "วันอังคาร",
+            "wednesday": "วันพุธ",
+            "thursday": "วันพฤหัสบดี",
+            "friday": "วันศุกร์",
+            "saturday": "วันเสาร์",
+            "sunday": "วันอาทิตย์",
+            "male": "ชาย",
+            "female": "หญิง",
+            "organic": "การค้นหาออร์แกนิก",
+            "facebook": "เฟสบุ๊ค",
+            "twitter": "ทวิตเตอร์",
+            "linkedin": "ลิงค์อิน"
+        },
+        "listing": {
+            "headers": {
+                "header1": "ผู้ใช้",
+                "header2": "การใช้งาน",
+                "header3": "วิธีการชำระเงิน",
+                "header4": "กิจกรรม"
+            },
+            "user_status": {
+                "new": "ใหม่",
+                "recurring": "ประจำ"
+            },
+            "registered": "ลงทะเบียนแล้ว",
+            "last_login": "เข้าสู่ระบบล่าสุด",
+            "usage_duration": "11 มิ.ย. 2020 - 10 ก.ค. 2020",
+            "registered_at": "1 ม.ค. 2020",
+            "items": {
+                "item1": {
+                    "name": "Yiorgos Avraamu",
+                    "login_at": "เมื่อ 10 วินาทีที่แล้ว"
+                },
+                "item2": {
+                    "name": "Avram Tarasios",
+                    "login_at": "เมื่อ 5 นาทีที่แล้ว"
+                },
+                "item3": {
+                    "name": "Quintin Ed",
+                    "login_at": "เมื่อ 1 ชั่วโมงที่แล้ว"
+                },
+                "item4": {
+                    "name": "Enéas Kwadwo",
+                    "login_at": "เมื่อเดือนที่แล้ว"
+                },
+                "item5": {
+                    "name": "Agapetus Tadeáš",
+                    "login_at": "เมื่อสัปดาห์ที่แล้ว"
+                },
+                "item6": {
+                    "name": "Friderik Dávid",
+                    "login_at": "เมื่อวานนี้"
+                }
+            }
+        }
+    },
+    "pokemons": {
+        "title": "โปเกมอน",
+        "add_new": "เพิ่มใหม่",
+        "attribute": {
+            "name": "ชื่อ",
+            "type": "ประเภท",
+            "egg_group": "กลุ่มไข่",
+            "hp": "HP",
+            "attack": "Atk",
+            "defense": "Def",
+            "sp_attack": "SpA",
+            "sp_defense": "SpD",
+            "speed": "Spd",
+            "total": "รวม"
+        }
+    },
+    "featured_nav": {
+        "dashboard": "แดชบอร์ด",
+        "users": "ผู้ใช้",
+        "settings": "การตั้งค่า"
+    },
+    "notification": {
+        "message": "คุณมี {{total}} การแจ้งเตือน",
+        "items": {
+            "new_user": "ผู้ใช้ใหม่ลงทะเบียนแล้ว",
+            "deleted_user": "ผู้ใช้ถูกลบ",
+            "sales_report": "รายงานการขายพร้อมแล้ว",
+            "new_client": "ลูกค้าใหม่",
+            "server_overloaded": "เซิร์ฟเวอร์มีภาระเกิน"
+        },
+        "server": {
+            "title": "เซิร์ฟเวอร์",
+            "processes": "กระบวนการ",
+            "cores": "หน่วยประมวลผล",
+            "items": {
+                "cpu": "การใช้งาน CPU",
+                "memory": "การใช้งานหน่วยความจำ",
+                "ssd1": "การใช้งาน SSD 1"
+            }
+        }
+    },
+    "task": {
+        "message": "คุณมี {{total}} งานที่รอดำเนินการ",
+        "items": {
+            "task1": "อัปเกรด Next.JS",
+            "task2": "ฝึกโปเกมอน",
+            "task3": "ทำให้โปเกมอนสมบูรณ์",
+            "task4": "จับโปเกมอนที่ส่องแสงทั้งหมด",
+            "task5": "เอาชนะทุกยิม"
+        },
+        "view_all": "ดูงานทั้งหมด"
+    },
+    "messages": {
+        "message": "คุณมี {{total}} ข้อความ",
+        "items": {
+            "item1": {
+                "user": "จอห์น โด",
+                "time": "เมื่อสักครู่นี้",
+                "title": "เลี้ยงปิกาชู",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+            },
+            "item2": {
+                "user": "จอห์น โด",
+                "time": "เมื่อ 5 นาทีที่แล้ว",
+                "title": "แต่งตัวอีฟี",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+            },
+            "item3": {
+                "user": "จอห์น โด",
+                "time": "13:52",
+                "title": "ฝึกซ้อมร่วมกัน",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+            },
+            "item4": {
+                "user": "จอห์น โด",
+                "time": "16:03",
+                "title": "ไปยังซาฟารีโซน",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+            }
+        }
+    },
+    "profile": {
+        "account": {
+            "title": "บัญชี",
+            "items": {
+                "updates": "การอัปเดต",
+                "messages": "ข้อความ",
+                "tasks": "งาน",
+                "comments": "ความคิดเห็น"
+            }
+        },
+        "settings": {
+            "title": "การตั้งค่า",
+            "items": {
+                "profile": "โปรไฟล์",
+                "settings": "การตั้งค่า",
+                "payments": "การชำระเงิน",
+                "projects": "โครงการ"
+            }
+        },
+        "lock_account": "ล็อคบัญชี",
+        "logout": "ออกจากระบบ"
+    },
+    "breadcrumb": {
+        "home": "หน้าแรก",
+        "library": "ห้องสมุด",
+        "data": "ข้อมูล"
+    },
+    "sidebar": {
+        "items": {
+            "dashboard": "แดชบอร์ด",
+            "sample": "ตัวอย่าง",
+            "theme": "ธีม",
+            "colors": "สี",
+            "typography": "ประเภทตัวอักษร",
+            "components": "ส่วนประกอบ",
+            "accordion": "แถบพับ",
+            "breadcrumb": "เส้นทางการนำทาง",
+            "cards": "การ์ด",
+            "carousel": "สไลด์โชว์",
+            "collapse": "ยุบ",
+            "list_group": "กลุ่มรายการ",
+            "navs": "การนำทาง",
+            "pagination": "การแบ่งหน้า",
+            "popovers": "ป๊อปโอเวอร์",
+            "progress": "ความก้าวหน้า",
+            "scrollspy": "การติดตามการเลื่อน",
+            "spinners": "สปินเนอร์",
+            "tables": "ตาราง",
+            "tabs": "แท็บ",
+            "tooltips": "คำแนะนำ",
+            "buttons": "ปุ่ม",
+            "buttons_group": "กลุ่มปุ่ม",
+            "dropdowns": "รายการดรอปดาวน์",
+            "charts": "กราฟ",
+            "form_control": "ควบคุมฟอร์ม",
+            "select": "เลือก",
+            "checks_and_radios": "การตรวจสอบและตัวเลือก",
+            "range": "ขอบเขต",
+            "input_group": "กลุ่มฟิลด์",
+            "floating_labels": "ป้ายลอย",
+            "layout": "เลย์เอาต์",
+            "validation": "การตรวจสอบ",
+            "core_ui_icons": "ไอคอน CoreUI",
+            "core_ui_icons_brand": "ไอคอน CoreUI - แบรนด์",
+            "core_ui_icons_flag": "ไอคอน CoreUI - ธง",
+            "alerts": "การแจ้งเตือน",
+            "badge": "แบดจ์",
+            "modals": "โมดอล",
+            "toasts": "ทอสท์",
+            "widgets": "วิดเจ็ต",
+            "login": "เข้าสู่ระบบ",
+            "register": "ลงทะเบียน",
+            "error404": "ข้อผิดพลาด 404",
+            "error500": "ข้อผิดพลาด 500",
+            "docs": "เอกสาร",
+            "try_core_ui_pro": "ลอง CoreUI PRO",
+            "base": "พื้นฐาน",
+            "forms": "ฟอร์ม",
+            "icons": "ไอคอน",
+            "notifications": "การแจ้งเตือน",
+            "extras": "เพิ่มเติม",
+            "pages": "หน้า"
+        }
+    }
+}

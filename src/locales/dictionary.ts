@@ -1,14 +1,13 @@
 import 'server-only'
 import { cookies } from 'next/headers'
-import { defaultLocale } from '@/locales/config'
+import { defaultLocale, Locale } from '@/locales/config'
 
 const dictionaries = {
+  th: () => import('./th/lang.json').then((module) => module.default),
   en: () => import('./en/lang.json').then((module) => module.default),
   ja: () => import('./ja/lang.json').then((module) => module.default),
-  zh: () => import('./zh/lang.json').then((module) => module.default),
+  zh: () => import('./zh/lang.json').then((module) => module.default)
 }
-
-type Locale = keyof typeof dictionaries
 
 export const getLocales = () => Object.keys(dictionaries) as Array<Locale>
 
