@@ -81,7 +81,7 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
             name="username"
             required
             disabled={submitting}
-            placeholder={dict.login.form.username}
+            placeholder={dict?.login?.form?.username ?? ""}
             aria-label="Username"
             defaultValue="Username"
           />
@@ -99,7 +99,7 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
             name="password"
             required
             disabled={submitting}
-            placeholder={dict.login.form.password}
+            placeholder={dict?.login?.form?.password ?? ""}
             aria-label="Password"
             defaultValue="Password"
           />
@@ -113,12 +113,12 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
               type="submit"
               disabled={submitting}
             >
-              {dict.login.form.submit}
+              {dict?.login?.form?.submit ?? ""}
             </Button>
           </Col>
           <Col xs={6} className="text-end">
             <Link className="px-0" href="#">
-              {dict.login.forgot_password}
+              {dict?.login?.forgot_password ?? ""}
             </Link>
           </Col>
         </Row>

@@ -14,9 +14,9 @@ import { useMediaQuery } from 'react-responsive'
 
 const CurrentTheme = ({ theme }: { theme: string }) => (
   <>
-    {theme === Theme.Light && <FontAwesomeIcon icon={faSun} size="lg" />}
-    {theme === Theme.Dark && <FontAwesomeIcon icon={faMoon} size="lg" />}
-    {theme === Theme.Auto && <FontAwesomeIcon icon={faCircleHalfStroke} size="lg" />}
+    {theme === Theme?.Light && <FontAwesomeIcon icon={faSun} size="lg" />}
+    {theme === Theme?.Dark && <FontAwesomeIcon icon={faMoon} size="lg" />}
+    {theme === Theme?.Auto && <FontAwesomeIcon icon={faCircleHalfStroke} size="lg" />}
   </>
 )
 
@@ -30,13 +30,13 @@ export default function HeaderTheme({ currentPreferredTheme }: { currentPreferre
     Cookies.set('preferred_theme', t)
 
     if (t === Theme.Auto) {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        Cookies.set('theme', Theme.Dark)
+      if (window.matchMedia('(prefers-color-scheme: dark)')?.matches) {
+        Cookies.set('theme', Theme?.Dark)
         router.refresh()
         return
       }
 
-      Cookies.set('theme', Theme.Light)
+      Cookies.set('theme', Theme?.Light)
       router.refresh()
       return
     }
@@ -52,11 +52,11 @@ export default function HeaderTheme({ currentPreferredTheme }: { currentPreferre
   )
 
   useEffect(() => {
-    if (preferredTheme !== Theme.Auto) {
+    if (preferredTheme !== Theme?.Auto) {
       return
     }
 
-    Cookies.set('theme', isDarkMode ? Theme.Dark : Theme.Light)
+    Cookies.set('theme', isDarkMode ? Theme?.Dark : Theme?.Light)
     router.refresh()
   }, [isDarkMode, preferredTheme, router])
 
@@ -67,25 +67,25 @@ export default function HeaderTheme({ currentPreferredTheme }: { currentPreferre
       </DropdownToggle>
       <DropdownMenu className="pt-0" align="end">
         <DropdownItem
-          active={preferredTheme === Theme.Light}
-          onClick={() => changePreferredTheme(Theme.Light)}
+          active={preferredTheme === Theme?.Light}
+          onClick={() => changePreferredTheme(Theme?.Light)}
         >
           <FontAwesomeIcon className="me-2" icon={faSun} fixedWidth />
-          {dict.theme.light}
+          {dict?.theme?.light ?? ""}
         </DropdownItem>
         <DropdownItem
-          active={preferredTheme === Theme.Dark}
-          onClick={() => changePreferredTheme(Theme.Dark)}
+          active={preferredTheme === Theme?.Dark}
+          onClick={() => changePreferredTheme(Theme?.Dark)}
         >
           <FontAwesomeIcon className="me-2" icon={faMoon} fixedWidth />
-          {dict.theme.dark}
+          {dict?.theme?.dark ?? ""}
         </DropdownItem>
         <DropdownItem
-          active={preferredTheme === Theme.Auto}
-          onClick={() => changePreferredTheme(Theme.Auto)}
+          active={preferredTheme === Theme?.Auto}
+          onClick={() => changePreferredTheme(Theme?.Auto)}
         >
           <FontAwesomeIcon className="me-2" icon={faCircleHalfStroke} fixedWidth />
-          {dict.theme.auto}
+          {dict?.theme?.auto ?? ""}
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>

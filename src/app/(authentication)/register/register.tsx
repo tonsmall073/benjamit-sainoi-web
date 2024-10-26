@@ -68,7 +68,7 @@ export default function Register() {
             name="username"
             required
             disabled={submitting}
-            placeholder={dict.signup.form.username}
+            placeholder={dict?.signup?.form?.username ?? ""}
             aria-label="Username"
           />
         </InputGroup>
@@ -82,7 +82,7 @@ export default function Register() {
             name="email"
             required
             disabled={submitting}
-            placeholder={dict.signup.form.email}
+            placeholder={dict?.signup?.form?.email ?? ""}
             aria-label="Email"
           />
         </InputGroup>
@@ -94,7 +94,7 @@ export default function Register() {
             name="password"
             required
             disabled={submitting}
-            placeholder={dict.signup.form.password}
+            placeholder={dict?.signup?.form?.password ?? ""}
             aria-label="Password"
           />
         </InputGroup>
@@ -106,13 +106,13 @@ export default function Register() {
             name="password_repeat"
             required
             disabled={submitting}
-            placeholder={dict.signup.form.confirm_password}
+            placeholder={dict?.signup?.form?.confirm_password ?? ""}
             aria-label="Confirm password"
           />
         </InputGroup>
 
         <Button type="submit" className="d-block w-100" disabled={submitting} variant="success">
-          {dict.signup.form.submit}
+          {dict?.signup?.form?.submit ?? ""}
         </Button>
       </Form>
     </>

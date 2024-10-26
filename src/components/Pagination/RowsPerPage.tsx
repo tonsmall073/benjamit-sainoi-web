@@ -12,7 +12,7 @@ export default function RowsPerPage(props: Props) {
 
   return (
     <div className="col-auto ms-sm-auto mb-3">
-      {dict.pagination.rows_per_page}
+      {dict?.pagination?.rows_per_page ?? ""}
       :
       {' '}
       <RowPerPageSelect perPage={perPage} />

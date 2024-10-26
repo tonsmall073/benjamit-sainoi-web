@@ -59,7 +59,7 @@ export default async function Page() {
                     )
                   </span>
                 </div>
-                <div>{dict.dashboard.featured.user}</div>
+                <div>{dict?.dashboard?.featured?.user ?? ""}</div>
               </div>
               <Dropdown align="end">
                 <DropdownToggle
@@ -72,9 +72,9 @@ export default async function Page() {
                 </DropdownToggle>
 
                 <DropdownMenu>
-                  <DropdownItem href="#/action-1">{dict.dashboard.featured.action.action1}</DropdownItem>
-                  <DropdownItem href="#/action-2">{dict.dashboard.featured.action.action2}</DropdownItem>
-                  <DropdownItem href="#/action-3">{dict.dashboard.featured.action.action3}</DropdownItem>
+                  <DropdownItem href="#/action-1">{dict?.dashboard?.featured?.action?.action1 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-2">{dict?.dashboard?.featured?.action?.action2 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-3">{dict?.dashboard?.featured?.action?.action3 ?? ""}</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </CardBody>
@@ -96,7 +96,7 @@ export default async function Page() {
                     )
                   </span>
                 </div>
-                <div>{dict.dashboard.featured.income}</div>
+                <div>{dict?.dashboard?.featured?.income ?? ""}</div>
               </div>
               <Dropdown align="end">
                 <DropdownToggle
@@ -109,9 +109,9 @@ export default async function Page() {
                 </DropdownToggle>
 
                 <DropdownMenu>
-                  <DropdownItem href="#/action-1">{dict.dashboard.featured.action.action1}</DropdownItem>
-                  <DropdownItem href="#/action-2">{dict.dashboard.featured.action.action2}</DropdownItem>
-                  <DropdownItem href="#/action-3">{dict.dashboard.featured.action.action3}</DropdownItem>
+                  <DropdownItem href="#/action-1">{dict?.dashboard?.featured?.action?.action1 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-2">{dict?.dashboard?.featured?.action?.action2 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-3">{dict?.dashboard?.featured?.action?.action3 ?? ""}</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </CardBody>
@@ -133,7 +133,7 @@ export default async function Page() {
                     )
                   </span>
                 </div>
-                <div>{dict.dashboard.featured.conversion_rate}</div>
+                <div>{dict?.dashboard?.featured?.conversion_rate ?? ""}</div>
               </div>
               <Dropdown align="end">
                 <DropdownToggle
@@ -146,9 +146,9 @@ export default async function Page() {
                 </DropdownToggle>
 
                 <DropdownMenu>
-                  <DropdownItem href="#/action-1">{dict.dashboard.featured.action.action1}</DropdownItem>
-                  <DropdownItem href="#/action-2">{dict.dashboard.featured.action.action2}</DropdownItem>
-                  <DropdownItem href="#/action-3">{dict.dashboard.featured.action.action3}</DropdownItem>
+                  <DropdownItem href="#/action-1">{dict?.dashboard?.featured?.action?.action1 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-2">{dict?.dashboard?.featured?.action?.action2 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-3">{dict?.dashboard?.featured?.action?.action3 ?? ""}</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </CardBody>
@@ -170,7 +170,7 @@ export default async function Page() {
                     )
                   </span>
                 </div>
-                <div>{dict.dashboard.featured.sessions}</div>
+                <div>{dict?.dashboard?.featured?.sessions ?? ""}</div>
               </div>
               <Dropdown align="end">
                 <DropdownToggle
@@ -183,9 +183,9 @@ export default async function Page() {
                 </DropdownToggle>
 
                 <DropdownMenu>
-                  <DropdownItem href="#/action-1">{dict.dashboard.featured.action.action1}</DropdownItem>
-                  <DropdownItem href="#/action-2">{dict.dashboard.featured.action.action2}</DropdownItem>
-                  <DropdownItem href="#/action-3">{dict.dashboard.featured.action.action3}</DropdownItem>
+                  <DropdownItem href="#/action-1">{dict?.dashboard?.featured?.action?.action1 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-2">{dict?.dashboard?.featured?.action?.action2 ?? ""}</DropdownItem>
+                  <DropdownItem href="#/action-3">{dict?.dashboard?.featured?.action?.action3 ?? ""}</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
             </CardBody>
@@ -200,8 +200,8 @@ export default async function Page() {
         <CardBody>
           <div className="d-flex justify-content-between">
             <div>
-              <h4 className="mb-0">{dict.dashboard.traffic.title}</h4>
-              <div className="small text-black-50 dark:text-gray-500">{dict.dashboard.traffic.duration}</div>
+              <h4 className="mb-0">{dict?.dashboard?.traffic?.title ?? ""}</h4>
+              <div className="small text-black-50 dark:text-gray-500">{dict?.dashboard?.traffic?.duration ?? ""}</div>
             </div>
             <div className="d-none d-md-block">
               <ButtonGroup aria-label="Toolbar with buttons" className="mx-3">
@@ -216,7 +216,7 @@ export default async function Page() {
                   className="btn btn-outline-secondary"
                   htmlFor="option1"
                 >
-                  {dict.dashboard.traffic.option.day}
+                  {dict?.dashboard?.traffic?.option?.day ?? ""}
                 </label>
                 <input
                   className="btn-check"
@@ -230,7 +230,7 @@ export default async function Page() {
                   className="btn btn-outline-secondary active"
                   htmlFor="option2"
                 >
-                  {dict.dashboard.traffic.option.month}
+                  {dict?.dashboard?.traffic?.option?.month ?? ""}
                 </label>
                 <input
                   className="btn-check"
@@ -243,7 +243,7 @@ export default async function Page() {
                   className="btn btn-outline-secondary"
                   htmlFor="option3"
                 >
-                  {dict.dashboard.traffic.option.year}
+                  {dict?.dashboard?.traffic?.option?.year ?? ""}
                 </label>
               </ButtonGroup>
               <Button variant="primary">
@@ -263,10 +263,10 @@ export default async function Page() {
         <CardFooter>
           <div className="row row-cols-1 row-cols-md-5 text-center">
             <div className="col mb-sm-2 mb-0">
-              <div className="text-black-50 dark:text-gray-500">{dict.dashboard.traffic.category1}</div>
+              <div className="text-black-50 dark:text-gray-500">{dict?.dashboard?.traffic?.category1 ?? ""}</div>
               <div className="fw-semibold">
                 29.703
-                {dict.dashboard.traffic.users}
+                {dict?.dashboard?.traffic?.users ?? ""}
                 {' '}
                 (40%)
               </div>
@@ -277,10 +277,10 @@ export default async function Page() {
               />
             </div>
             <div className="col mb-sm-2 mb-0">
-              <div className="text-black-50 dark:text-gray-500">{dict.dashboard.traffic.category2}</div>
+              <div className="text-black-50 dark:text-gray-500">{dict?.dashboard?.traffic?.category2 ?? ""}</div>
               <div className="fw-semibold">
                 24.093
-                {dict.dashboard.traffic.users}
+                {dict?.dashboard?.traffic?.users ?? ""}
                 {' '}
                 (20%)
               </div>
@@ -291,10 +291,10 @@ export default async function Page() {
               />
             </div>
             <div className="col mb-sm-2 mb-0">
-              <div className="text-black-50 dark:text-gray-500">{dict.dashboard.traffic.category3}</div>
+              <div className="text-black-50 dark:text-gray-500">{dict?.dashboard?.traffic?.category3 ?? ""}</div>
               <div className="fw-semibold">
                 78.706
-                {dict.dashboard.traffic.views}
+                {dict?.dashboard?.traffic?.views ?? ""}
                 {' '}
                 (60%)
               </div>
@@ -305,10 +305,10 @@ export default async function Page() {
               />
             </div>
             <div className="col mb-sm-2 mb-0">
-              <div className="text-black-50 dark:text-gray-500">{dict.dashboard.traffic.category4}</div>
+              <div className="text-black-50 dark:text-gray-500">{dict?.dashboard?.traffic?.category4 ?? ""}</div>
               <div className="fw-semibold">
                 22.123
-                {dict.dashboard.traffic.users}
+                {dict?.dashboard?.traffic?.users ?? ""}
                 {' '}
                 (80%)
               </div>
@@ -319,7 +319,7 @@ export default async function Page() {
               />
             </div>
             <div className="col mb-sm-2 mb-0">
-              <div className="text-black-50 dark:text-gray-500">{dict.dashboard.traffic.category5}</div>
+              <div className="text-black-50 dark:text-gray-500">{dict?.dashboard?.traffic?.category5 ?? ""}</div>
               <div className="fw-semibold">40.15%</div>
               <ProgressBar
                 className="progress-thin mt-2"
@@ -350,14 +350,14 @@ export default async function Page() {
                 <div className="col">
                   <div className="fs-5 fw-semibold">89k</div>
                   <div className="text-uppercase text-black-50 dark:text-gray-500 small">
-                    {dict.dashboard.social.facebook.label1}
+                    {dict?.dashboard?.social?.facebook?.label1 ?? ""}
                   </div>
                 </div>
                 <div className="vr p-0" />
                 <div className="col">
                   <div className="fs-5 fw-semibold">459</div>
                   <div className="text-uppercase text-black-50 dark:text-gray-500 small">
-                    {dict.dashboard.social.facebook.label2}
+                    {dict?.dashboard?.social?.facebook?.label2 ?? ""}
                   </div>
                 </div>
               </div>
@@ -383,14 +383,14 @@ export default async function Page() {
                 <div className="col">
                   <div className="fs-5 fw-semibold">973k</div>
                   <div className="text-uppercase text-black-50 dark:text-gray-500 small">
-                    {dict.dashboard.social.twitter.label1}
+                    {dict?.dashboard?.social?.twitter?.label1 ?? ""}
                   </div>
                 </div>
                 <div className="vr p-0" />
                 <div className="col">
                   <div className="fs-5 fw-semibold">1.792</div>
                   <div className="text-uppercase text-black-50 dark:text-gray-500 small">
-                    {dict.dashboard.social.twitter.label2}
+                    {dict?.dashboard?.social?.twitter?.label2 ?? ""}
                   </div>
                 </div>
               </div>
@@ -416,14 +416,14 @@ export default async function Page() {
                 <div className="col">
                   <div className="fs-5 fw-semibold">500+</div>
                   <div className="text-uppercase text-black-50 dark:text-gray-500 small">
-                    {dict.dashboard.social.instagram.label1}
+                    {dict?.dashboard?.social?.instagram?.label1 ?? ""}
                   </div>
                 </div>
                 <div className="vr p-0" />
                 <div className="col">
                   <div className="fs-5 fw-semibold">292</div>
                   <div className="text-uppercase text-black-50 dark:text-gray-500 small">
-                    {dict.dashboard.social.instagram.label2}
+                    {dict?.dashboard?.social?.instagram?.label2 ?? ""}
                   </div>
                 </div>
               </div>
@@ -437,7 +437,7 @@ export default async function Page() {
         <div className="col-md-12">
           <Card>
             <CardHeader>
-              {dict.dashboard.sales.title}
+              {dict?.dashboard?.sales?.title ?? ""}
             </CardHeader>
             <CardBody>
               <div className="row">
@@ -446,7 +446,7 @@ export default async function Page() {
                     <div className="col-6">
                       <div className="border-start border-4 border-info px-3 mb-3">
                         <small className="text-black-50 dark:text-gray-500">
-                          {dict.dashboard.sales.stats.stat1}
+                          {dict?.dashboard?.sales?.stats?.stat1 ?? ""}
                         </small>
                         <div className="fs-5 fw-semibold">9,123</div>
                       </div>
@@ -455,7 +455,7 @@ export default async function Page() {
                     <div className="col-6">
                       <div className="border-start border-4 border-danger px-3 mb-3">
                         <small className="text-black-50 dark:text-gray-500">
-                          {dict.dashboard.sales.stats.stat2}
+                          {dict?.dashboard?.sales?.stats?.stat2 ?? ""}
                         </small>
                         <div className="fs-5 fw-semibold">22,643</div>
                       </div>
@@ -468,7 +468,7 @@ export default async function Page() {
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
                       <span className="text-black-50 dark:text-gray-500 small">
-                        {dict.dashboard.sales.monday}
+                        {dict?.dashboard?.sales?.monday ?? ''}
                       </span>
                     </div>
                     <div className="col">
@@ -488,7 +488,7 @@ export default async function Page() {
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
                       <span className="text-black-50 dark:text-gray-500 small">
-                        {dict.dashboard.sales.tuesday}
+                        {dict?.dashboard?.sales?.tuesday ?? ""}
                       </span>
                     </div>
                     <div className="col">
@@ -508,7 +508,7 @@ export default async function Page() {
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
                       <span className="text-black-50 dark:text-gray-500 small">
-                        {dict.dashboard.sales.wednesday}
+                        {dict?.dashboard?.sales?.wednesday ?? ""}
                       </span>
                     </div>
                     <div className="col">
@@ -528,7 +528,7 @@ export default async function Page() {
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
                       <span className="text-black-50 dark:text-gray-500 small">
-                        {dict.dashboard.sales.thursday}
+                        {dict?.dashboard?.sales?.thursday ?? ""}
                       </span>
                     </div>
                     <div className="col">
@@ -548,7 +548,7 @@ export default async function Page() {
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
                       <span className="text-black-50 dark:text-gray-500 small">
-                        {dict.dashboard.sales.friday}
+                        {dict?.dashboard?.sales?.friday ?? ""}
                       </span>
                     </div>
                     <div className="col">
@@ -568,7 +568,7 @@ export default async function Page() {
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
                       <span className="text-black-50 dark:text-gray-500 small">
-                        {dict.dashboard.sales.saturday}
+                        {dict?.dashboard?.sales?.saturday ?? ""}
                       </span>
                     </div>
                     <div className="col">
@@ -588,7 +588,7 @@ export default async function Page() {
                   <div className="row mb-4 align-items-center">
                     <div className="col-3">
                       <span className="text-black-50 dark:text-gray-500 small">
-                        {dict.dashboard.sales.sunday}
+                        {dict?.dashboard?.sales?.sunday ?? ""}
                       </span>
                     </div>
                     <div className="col">
@@ -611,7 +611,7 @@ export default async function Page() {
                     <div className="col-6">
                       <div className="border-start border-4 border-warning px-3 mb-3">
                         <small className="text-black-50 dark:text-gray-500">
-                          {dict.dashboard.sales.stats.stat3}
+                          {dict?.dashboard?.sales?.stats?.stat3 ?? ""}
                         </small>
                         <div className="fs-5 fw-semibold">78,623</div>
                       </div>
@@ -620,7 +620,7 @@ export default async function Page() {
                     <div className="col-6">
                       <div className="border-start border-4 border-success px-3 mb-3">
                         <small className="text-black-50 dark:text-gray-500">
-                          {dict.dashboard.sales.stats.stat4}
+                          {dict?.dashboard?.sales?.stats?.stat4 ?? ""}
                         </small>
                         <div className="fs-5 fw-semibold">49,123</div>
                       </div>
@@ -635,7 +635,7 @@ export default async function Page() {
                       <div className="d-flex mb-1">
                         <div>
                           <FontAwesomeIcon className="me-2" icon={faMars} fixedWidth />
-                          {dict.dashboard.sales.male}
+                          {dict?.dashboard?.sales?.male ?? ""}
                         </div>
                         <div className="ms-auto fw-semibold">43%</div>
                       </div>
@@ -650,7 +650,7 @@ export default async function Page() {
                       <div className="d-flex mb-1">
                         <div>
                           <FontAwesomeIcon className="me-2" icon={faVenus} fixedWidth />
-                          {dict.dashboard.sales.female}
+                          {dict?.dashboard?.sales?.female ?? ""}
                         </div>
                         <div className="ms-auto fw-semibold">37%</div>
                       </div>
@@ -666,7 +666,7 @@ export default async function Page() {
                     <div className="d-flex mb-1">
                       <div>
                         <FontAwesomeIcon className="me-2" icon={faSearch} fixedWidth />
-                        {dict.dashboard.sales.organic}
+                        {dict?.dashboard?.sales?.organic ?? ""}
                       </div>
                       <div className="ms-auto fw-semibold me-2">191.235</div>
                       <div className="text-black-50 dark:text-gray-500 small">(56%)</div>
@@ -682,7 +682,7 @@ export default async function Page() {
                     <div className="d-flex mb-1">
                       <div>
                         <FontAwesomeIcon className="me-2" icon={faFacebookF} fixedWidth />
-                        {dict.dashboard.sales.facebook}
+                        {dict?.dashboard?.sales?.facebook ?? ""}
                       </div>
                       <div className="ms-auto fw-semibold me-2">51.223</div>
                       <div className="text-black-50 dark:text-gray-500 small">(15%)</div>
@@ -698,7 +698,7 @@ export default async function Page() {
                     <div className="d-flex mb-1">
                       <div>
                         <FontAwesomeIcon className="me-2" icon={faTwitter} fixedWidth />
-                        {dict.dashboard.sales.twitter}
+                        {dict?.dashboard?.sales?.twitter ?? ""}
                       </div>
                       <div className="ms-auto fw-semibold me-2">37.564</div>
                       <div className="text-black-50 dark:text-gray-500 small">(11%)</div>
@@ -714,7 +714,7 @@ export default async function Page() {
                     <div className="d-flex mb-1">
                       <div>
                         <FontAwesomeIcon className="me-2" icon={faLinkedinIn} fixedWidth />
-                        {dict.dashboard.sales.linkedin}
+                        {dict?.dashboard?.sales?.linkedin ?? ""}
                       </div>
                       <div className="ms-auto fw-semibold me-2">27.319</div>
                       <div className="text-black-50 dark:text-gray-500 small">(8%)</div>
@@ -737,10 +737,10 @@ export default async function Page() {
                       <th className="text-center" aria-label="icon">
                         <FontAwesomeIcon icon={faUsers} fixedWidth />
                       </th>
-                      <th>{dict.dashboard.listing.headers.header1}</th>
-                      <th>{dict.dashboard.listing.headers.header2}</th>
-                      <th className="text-center">{dict.dashboard.listing.headers.header3}</th>
-                      <th>{dict.dashboard.listing.headers.header4}</th>
+                      <th>{dict?.dashboard?.listing?.headers?.header1 ?? ""}</th>
+                      <th>{dict?.dashboard?.listing?.headers?.header2 ?? ""}</th>
+                      <th className="text-center">{dict?.dashboard?.listing?.headers?.header3 ?? ""}</th>
+                      <th>{dict?.dashboard?.listing?.headers?.header4 ?? ""}</th>
                       <th aria-label="Action" />
                     </tr>
                   </thead>
@@ -761,16 +761,16 @@ export default async function Page() {
                         </div>
                       </td>
                       <td>
-                        <div>{dict.dashboard.listing.items.item1.name}</div>
+                        <div>{dict?.dashboard?.listing?.items?.item1?.name ?? ""}</div>
                         <div className="small text-black-50 dark:text-gray-500">
-                          <span>{dict.dashboard.listing.user_status.new}</span>
+                          <span>{dict?.dashboard?.listing?.user_status?.new ?? ""}</span>
                           {' '}
                           |
                           {' '}
-                          {dict.dashboard.listing.registered}
+                          {dict?.dashboard?.listing?.registered ?? ""}
                           :
                           {' '}
-                          {dict.dashboard.listing.registered_at}
+                          {dict?.dashboard?.listing?.registered_at ?? ""}
                         </div>
                       </td>
                       <td>
@@ -780,7 +780,7 @@ export default async function Page() {
                           </div>
                           <div className="float-end">
                             <small className="text-black-50 dark:text-gray-500">
-                              {dict.dashboard.listing.usage_duration}
+                              {dict?.dashboard?.listing?.usage_duration ?? ""}
                             </small>
                           </div>
                         </div>
@@ -790,8 +790,8 @@ export default async function Page() {
                         <FontAwesomeIcon icon={faCcAmex} size="lg" fixedWidth />
                       </td>
                       <td>
-                        <div className="small text-black-50 dark:text-gray-500">{dict.dashboard.listing.last_login}</div>
-                        <div className="fw-semibold">{dict.dashboard.listing.items.item1.login_at}</div>
+                        <div className="small text-black-50 dark:text-gray-500">{dict?.dashboard?.listing?.last_login ?? ""}</div>
+                        <div className="fw-semibold">{dict?.dashboard?.listing?.items?.item1?.login_at ?? ""}</div>
                       </td>
                       <td>
                         <Dropdown align="end">
@@ -805,13 +805,13 @@ export default async function Page() {
                           </DropdownToggle>
 
                           <DropdownMenu>
-                            <DropdownItem href="#/action-1">{dict.action.info}</DropdownItem>
-                            <DropdownItem href="#/action-2">{dict.action.edit}</DropdownItem>
+                            <DropdownItem href="#/action-1">{dict?.action?.info ?? ""}</DropdownItem>
+                            <DropdownItem href="#/action-2">{dict?.action?.edit ?? ""}</DropdownItem>
                             <DropdownItem
                               className="text-danger"
                               href="#/action-3"
                             >
-                              {dict.action.delete}
+                              {dict?.action?.delete ?? ""}
                             </DropdownItem>
                           </DropdownMenu>
                         </Dropdown>
@@ -833,16 +833,16 @@ export default async function Page() {
                         </div>
                       </td>
                       <td>
-                        <div>{dict.dashboard.listing.items.item2.name}</div>
+                        <div>{dict?.dashboard?.listing?.items?.item2?.name ?? ""}</div>
                         <div className="small text-black-50 dark:text-gray-500">
-                          <span>{dict.dashboard.listing.user_status.recurring}</span>
+                          <span>{dict?.dashboard?.listing?.user_status?.recurring ?? ""}</span>
                           {' '}
                           |
                           {' '}
-                          {dict.dashboard.listing.registered}
+                          {dict?.dashboard?.listing?.registered ?? ""}
                           :
                           {' '}
-                          {dict.dashboard.listing.registered_at}
+                          {dict?.dashboard?.listing?.registered_at ?? ""}
                         </div>
                       </td>
                       <td>
@@ -852,7 +852,7 @@ export default async function Page() {
                           </div>
                           <div className="float-end">
                             <small className="text-black-50 dark:text-gray-500">
-                              {dict.dashboard.listing.usage_duration}
+                              {dict?.dashboard?.listing?.usage_duration ?? ""}
                             </small>
                           </div>
                         </div>
@@ -862,8 +862,8 @@ export default async function Page() {
                         <FontAwesomeIcon icon={faCcVisa} size="lg" fixedWidth />
                       </td>
                       <td>
-                        <div className="small text-black-50 dark:text-gray-500">{dict.dashboard.listing.last_login}</div>
-                        <div className="fw-semibold">{dict.dashboard.listing.items.item2.login_at}</div>
+                        <div className="small text-black-50 dark:text-gray-500">{dict?.dashboard?.listing?.last_login ?? ""}</div>
+                        <div className="fw-semibold">{dict?.dashboard?.listing?.items?.item2?.login_at ?? ""}</div>
                       </td>
                       <td>
                         <Dropdown align="end">
@@ -877,13 +877,13 @@ export default async function Page() {
                           </DropdownToggle>
 
                           <DropdownMenu>
-                            <DropdownItem href="#/action-1">{dict.action.info}</DropdownItem>
-                            <DropdownItem href="#/action-2">{dict.action.edit}</DropdownItem>
+                            <DropdownItem href="#/action-1">{dict?.action?.info ?? ""}</DropdownItem>
+                            <DropdownItem href="#/action-2">{dict?.action?.edit ?? ""}</DropdownItem>
                             <DropdownItem
                               className="text-danger"
                               href="#/action-3"
                             >
-                              {dict.action.delete}
+                              {dict?.action?.delete ?? ""}
                             </DropdownItem>
                           </DropdownMenu>
                         </Dropdown>
@@ -905,16 +905,16 @@ export default async function Page() {
                         </div>
                       </td>
                       <td>
-                        <div>{dict.dashboard.listing.items.item3.name}</div>
+                        <div>{dict?.dashboard?.listing?.items?.item3?.name ?? ""}</div>
                         <div className="small text-black-50 dark:text-gray-500">
-                          <span>{dict.dashboard.listing.user_status.new}</span>
+                          <span>{dict?.dashboard?.listing?.user_status?.new ?? ""}</span>
                           {' '}
                           |
                           {' '}
-                          {dict.dashboard.listing.registered}
+                          {dict?.dashboard?.listing?.registered ?? ""}
                           :
                           {' '}
-                          {dict.dashboard.listing.registered_at}
+                          {dict?.dashboard?.listing?.registered_at ?? ""}
                         </div>
                       </td>
                       <td>
@@ -924,7 +924,7 @@ export default async function Page() {
                           </div>
                           <div className="float-end">
                             <small className="text-black-50 dark:text-gray-500">
-                              {dict.dashboard.listing.usage_duration}
+                              {dict?.dashboard?.listing?.usage_duration ?? ""}
                             </small>
                           </div>
                         </div>
@@ -934,8 +934,8 @@ export default async function Page() {
                         <FontAwesomeIcon icon={faCcStripe} size="lg" fixedWidth />
                       </td>
                       <td>
-                        <div className="small text-black-50 dark:text-gray-500">{dict.dashboard.listing.last_login}</div>
-                        <div className="fw-semibold">{dict.dashboard.listing.items.item3.login_at}</div>
+                        <div className="small text-black-50 dark:text-gray-500">{dict?.dashboard?.listing?.last_login ?? ""}</div>
+                        <div className="fw-semibold">{dict?.dashboard?.listing?.items?.item3?.login_at ?? ""}</div>
                       </td>
                       <td>
                         <Dropdown align="end">
@@ -949,13 +949,13 @@ export default async function Page() {
                           </DropdownToggle>
 
                           <DropdownMenu>
-                            <DropdownItem href="#/action-1">{dict.action.info}</DropdownItem>
-                            <DropdownItem href="#/action-2">{dict.action.edit}</DropdownItem>
+                            <DropdownItem href="#/action-1">{dict?.action?.info ?? ""}</DropdownItem>
+                            <DropdownItem href="#/action-2">{dict?.action?.edit ?? ""}</DropdownItem>
                             <DropdownItem
                               className="text-danger"
                               href="#/action-3"
                             >
-                              {dict.action.delete}
+                              {dict?.action?.delete ?? ""}
                             </DropdownItem>
                           </DropdownMenu>
                         </Dropdown>
@@ -977,16 +977,16 @@ export default async function Page() {
                         </div>
                       </td>
                       <td>
-                        <div>{dict.dashboard.listing.items.item4.name}</div>
+                        <div>{dict?.dashboard?.listing?.items?.item4?.name ?? ""}</div>
                         <div className="small text-black-50 dark:text-gray-500">
-                          <span>{dict.dashboard.listing.user_status.new}</span>
+                          <span>{dict?.dashboard?.listing?.user_status.new ?? ""}</span>
                           {' '}
                           |
                           {' '}
-                          {dict.dashboard.listing.registered}
+                          {dict?.dashboard?.listing?.registered ?? ""}
                           :
                           {' '}
-                          {dict.dashboard.listing.registered_at}
+                          {dict?.dashboard?.listing?.registered_at ?? ""}
                         </div>
                       </td>
                       <td>
@@ -996,7 +996,7 @@ export default async function Page() {
                           </div>
                           <div className="float-end">
                             <small className="text-black-50 dark:text-gray-500">
-                              {dict.dashboard.listing.usage_duration}
+                              {dict?.dashboard?.listing?.usage_duration ?? ""}
                             </small>
                           </div>
                         </div>
@@ -1006,8 +1006,8 @@ export default async function Page() {
                         <FontAwesomeIcon icon={faCcPaypal} size="lg" fixedWidth />
                       </td>
                       <td>
-                        <div className="small text-black-50 dark:text-gray-500">{dict.dashboard.listing.last_login}</div>
-                        <div className="fw-semibold">{dict.dashboard.listing.items.item4.login_at}</div>
+                        <div className="small text-black-50 dark:text-gray-500">{dict?.dashboard?.listing?.last_login ?? ""}</div>
+                        <div className="fw-semibold">{dict?.dashboard?.listing?.items?.item4?.login_at ?? ""}</div>
                       </td>
                       <td>
                         <Dropdown align="end">
@@ -1021,13 +1021,13 @@ export default async function Page() {
                           </DropdownToggle>
 
                           <DropdownMenu>
-                            <DropdownItem href="#/action-1">{dict.action.info}</DropdownItem>
-                            <DropdownItem href="#/action-2">{dict.action.edit}</DropdownItem>
+                            <DropdownItem href="#/action-1">{dict?.action?.info ?? ""}</DropdownItem>
+                            <DropdownItem href="#/action-2">{dict?.action?.edit ?? ""}</DropdownItem>
                             <DropdownItem
                               className="text-danger"
                               href="#/action-3"
                             >
-                              {dict.action.delete}
+                              {dict?.action?.delete ?? ""}
                             </DropdownItem>
                           </DropdownMenu>
                         </Dropdown>
@@ -1049,16 +1049,16 @@ export default async function Page() {
                         </div>
                       </td>
                       <td>
-                        <div>{dict.dashboard.listing.items.item5.name}</div>
+                        <div>{dict?.dashboard?.listing?.items?.item5?.name ?? ""}</div>
                         <div className="small text-black-50 dark:text-gray-500">
-                          <span>{dict.dashboard.listing.user_status.new}</span>
+                          <span>{dict?.dashboard?.listing?.user_status.new ?? ""}</span>
                           {' '}
                           |
                           {' '}
-                          {dict.dashboard.listing.registered}
+                          {dict?.dashboard?.listing?.registered ?? ""}
                           :
                           {' '}
-                          {dict.dashboard.listing.registered_at}
+                          {dict?.dashboard?.listing?.registered_at ?? ""}
                         </div>
                       </td>
                       <td>
@@ -1068,7 +1068,7 @@ export default async function Page() {
                           </div>
                           <div className="float-end">
                             <small className="text-black-50 dark:text-gray-500">
-                              {dict.dashboard.listing.usage_duration}
+                              {dict?.dashboard?.listing?.usage_duration ?? ""}
                             </small>
                           </div>
                         </div>
@@ -1078,8 +1078,8 @@ export default async function Page() {
                         <FontAwesomeIcon icon={faCcApplePay} size="lg" fixedWidth />
                       </td>
                       <td>
-                        <div className="small text-black-50 dark:text-gray-500">{dict.dashboard.listing.last_login}</div>
-                        <div className="fw-semibold">{dict.dashboard.listing.items.item5.login_at}</div>
+                        <div className="small text-black-50 dark:text-gray-500">{dict?.dashboard?.listing?.last_login ?? ""}</div>
+                        <div className="fw-semibold">{dict?.dashboard?.listing?.items?.item5?.login_at ?? ""}</div>
                       </td>
                       <td>
                         <Dropdown align="end">
@@ -1093,13 +1093,13 @@ export default async function Page() {
                           </DropdownToggle>
 
                           <DropdownMenu>
-                            <DropdownItem href="#/action-1">{dict.action.info}</DropdownItem>
-                            <DropdownItem href="#/action-2">{dict.action.edit}</DropdownItem>
+                            <DropdownItem href="#/action-1">{dict?.action?.info ?? ""}</DropdownItem>
+                            <DropdownItem href="#/action-2">{dict?.action?.edit ?? ""}</DropdownItem>
                             <DropdownItem
                               className="text-danger"
                               href="#/action-3"
                             >
-                              {dict.action.delete}
+                              {dict?.action?.delete ?? ""}
                             </DropdownItem>
                           </DropdownMenu>
                         </Dropdown>
@@ -1121,16 +1121,16 @@ export default async function Page() {
                         </div>
                       </td>
                       <td>
-                        <div>{dict.dashboard.listing.items.item6.name}</div>
+                        <div>{dict?.dashboard?.listing?.items?.item6?.name ?? ""}</div>
                         <div className="small text-black-50 dark:text-gray-500">
-                          <span>{dict.dashboard.listing.user_status.new}</span>
+                          <span>{dict?.dashboard?.listing?.user_status?.new ?? ""}</span>
                           {' '}
                           |
                           {' '}
-                          {dict.dashboard.listing.registered}
+                          {dict?.dashboard?.listing?.registered ?? ""}
                           :
                           {' '}
-                          {dict.dashboard.listing.registered_at}
+                          {dict?.dashboard?.listing?.registered_at ?? ""}
                         </div>
                       </td>
                       <td>
@@ -1140,7 +1140,7 @@ export default async function Page() {
                           </div>
                           <div className="float-end">
                             <small className="text-black-50 dark:text-gray-500">
-                              {dict.dashboard.listing.usage_duration}
+                              {dict?.dashboard?.listing?.usage_duration ?? ""}
                             </small>
                           </div>
                         </div>
@@ -1150,8 +1150,8 @@ export default async function Page() {
                         <FontAwesomeIcon icon={faCcAmex} size="lg" fixedWidth />
                       </td>
                       <td>
-                        <div className="small text-black-50 dark:text-gray-500">{dict.dashboard.listing.last_login}</div>
-                        <div className="fw-semibold">{dict.dashboard.listing.items.item6.login_at}</div>
+                        <div className="small text-black-50 dark:text-gray-500">{dict?.dashboard?.listing?.last_login ?? ""}</div>
+                        <div className="fw-semibold">{dict?.dashboard?.listing?.items?.item6?.login_at ?? ""}</div>
                       </td>
                       <td>
                         <Dropdown align="end">
@@ -1165,13 +1165,13 @@ export default async function Page() {
                           </DropdownToggle>
 
                           <DropdownMenu>
-                            <DropdownItem href="#/action-1">{dict.action.info}</DropdownItem>
-                            <DropdownItem href="#/action-2">{dict.action.edit}</DropdownItem>
+                            <DropdownItem href="#/action-1">{dict?.action?.info ?? ""}</DropdownItem>
+                            <DropdownItem href="#/action-2">{dict?.action?.edit ?? ""}</DropdownItem>
                             <DropdownItem
                               className="text-danger"
                               href="#/action-3"
                             >
-                              {dict.action.delete}
+                              {dict?.action?.delete ?? ""}
                             </DropdownItem>
                           </DropdownMenu>
                         </Dropdown>

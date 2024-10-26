@@ -60,17 +60,17 @@ export default function Index(props: Props) {
 
   return (
     <Card>
-      <Card.Header>{dict.pokemons.title}</Card.Header>
+      <Card.Header>{dict?.pokemons?.title ?? ""}</Card.Header>
       <Card.Body>
         <div className="mb-3 text-end">
           <Button variant="success" onClick={() => router.push('/pokemons/create')}>
             <FontAwesomeIcon icon={faPlus} fixedWidth />
-            {dict.pokemons.add_new}
+            {dict?.pokemons?.add_new ?? ""}
           </Button>
         </div>
-        <Pagination meta={pokemonResource.meta} />
-        <PokemonList pokemons={pokemonResource.data} />
-        <Pagination meta={pokemonResource.meta} />
+        <Pagination meta={pokemonResource?.meta ?? ""} />
+        <PokemonList pokemons={pokemonResource?.data ?? ""} />
+        <Pagination meta={pokemonResource?.meta ?? ""} />
       </Card.Body>
     </Card>
   )

@@ -37,7 +37,7 @@ const SubmitButton = () => {
 
   return (
     <Button disabled={pending} className="me-3" type="submit" variant="success">
-      {pending ? dict.action.submitting : dict.action.submit}
+      {pending ? dict?.action?.submitting ?? "" : dict?.action?.submit ?? ""}
     </Button>
   )
 }
@@ -67,10 +67,10 @@ export default function Form(props: Props) {
   return (
     <BSForm noValidate key={state.formKey} action={formAction}>
       <Alert
-        variant={state.success ? 'success' : 'danger'}
-        show={state.errors === undefined && state.message !== ''}
+        variant={state?.success ? 'success' : 'danger'}
+        show={state?.errors === undefined && state?.message !== ''}
       >
-        {state.message}
+        {state?.message ?? ""}
       </Alert>
 
       {pokemon && (
@@ -84,28 +84,28 @@ export default function Form(props: Props) {
           <Image
             fill
             style={{ objectFit: 'contain' }}
-            alt={pokemon.pokemondb_identifier}
+            alt={pokemon?.pokemondb_identifier ?? ""}
             sizes="5vw"
-            src={`https://img.pokemondb.net/sprites/home/normal/2x/${pokemon.pokemondb_identifier}.jpg`}
+            src={`https://img.pokemondb.net/sprites/home/normal/2x/${pokemon?.pokemondb_identifier}.jpg`}
           />
         </div>
       )}
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.name}</FormLabel>
+        <FormLabel>{dict?.pokemons?.attribute?.name ?? ""}</FormLabel>
         <FormControl
           type="text"
           name="name"
           defaultValue={pokemon?.name}
-          isInvalid={!!state.errors?.name}
+          isInvalid={!!state?.errors?.name}
           required
         />
         <FormError messages={state.errors?.name} />
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.type}</FormLabel>
-        <div className={classNames({ 'is-invalid': !!state.errors?.types })}>
+        <FormLabel>{dict?.pokemons?.attribute?.type ?? ""}</FormLabel>
+        <div className={classNames({ 'is-invalid': !!state?.errors?.types })}>
           <Row>
             {types.map((type) => (
               <Col xs={6} sm={4} md={3} lg={2} key={type.id}>
@@ -126,22 +126,22 @@ export default function Form(props: Props) {
             ))}
           </Row>
         </div>
-        <FormError messages={state.errors?.types} />
+        <FormError messages={state?.errors?.types} />
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.egg_group}</FormLabel>
-        <div className={classNames({ 'is-invalid': !!state.errors?.eggGroups })}>
+        <FormLabel>{dict?.pokemons?.attribute?.egg_group}</FormLabel>
+        <div className={classNames({ 'is-invalid': !!state?.errors?.eggGroups })}>
           <Row>
             {eggGroups.map((eggGroup) => (
               <Col xs={6} sm={4} md={3} lg={2} key={eggGroup.id}>
                 <FormCheck
-                  id={`eg-${eggGroup.id}`}
+                  id={`eg-${eggGroup?.id}`}
                   type="checkbox"
                   name="eggGroups"
-                  value={eggGroup.id}
-                  label={eggGroup.name}
-                  defaultChecked={pokemon?.egg_groups.some((eg) => eg.id === eggGroup.id)}
+                  value={eggGroup?.id ?? 0}
+                  label={eggGroup?.name ?? ""}
+                  defaultChecked={pokemon?.egg_groups?.some((eg) => eg?.id === eggGroup?.id) ?? false}
                 />
               </Col>
             ))}
@@ -151,46 +151,46 @@ export default function Form(props: Props) {
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.hp}</FormLabel>
+        <FormLabel>{dict?.pokemons?.attribute?.hp ?? ""}</FormLabel>
         <FormControl
           className="w-auto"
           type="text"
           name="hp"
           required
-          defaultValue={pokemon?.hp}
-          isInvalid={!!state.errors?.hp}
+          defaultValue={pokemon?.hp ?? ""}
+          isInvalid={!!state?.errors?.hp}
         />
-        <FormError messages={state.errors?.hp} />
+        <FormError messages={state?.errors?.hp} />
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.attack}</FormLabel>
+        <FormLabel>{dict?.pokemons?.attribute?.attack ?? ""}</FormLabel>
         <FormControl
           className="w-auto"
           type="number"
           name="attack"
           required
           defaultValue={pokemon?.attack}
-          isInvalid={!!state.errors?.attack}
+          isInvalid={!!state?.errors?.attack}
         />
         <FormError messages={state.errors?.attack} />
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.defense}</FormLabel>
+        <FormLabel>{dict?.pokemons?.attribute?.defense ?? ""}</FormLabel>
         <FormControl
           className="w-auto"
           type="number"
           name="defense"
           required
           defaultValue={pokemon?.defense}
-          isInvalid={!!state.errors?.defense}
+          isInvalid={!!state?.errors?.defense}
         />
-        <FormError messages={state.errors?.defense} />
+        <FormError messages={state?.errors?.defense} />
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.sp_attack}</FormLabel>
+        <FormLabel>{dict?.pokemons?.attribute?.sp_attack ?? ""}</FormLabel>
         <FormControl
           className="w-auto"
           type="number"
@@ -203,7 +203,7 @@ export default function Form(props: Props) {
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.sp_defense}</FormLabel>
+        <FormLabel>{dict?.pokemons?.attribute?.sp_defense ?? ""}</FormLabel>
         <FormControl
           className="w-auto"
           type="number"
@@ -216,7 +216,7 @@ export default function Form(props: Props) {
       </FormGroup>
 
       <FormGroup className="mb-3">
-        <FormLabel>{dict.pokemons.attribute.speed}</FormLabel>
+        <FormLabel>{dict?.pokemons?.attribute?.speed ?? ""}</FormLabel>
         <FormControl
           className="w-auto"
           type="number"
@@ -229,7 +229,7 @@ export default function Form(props: Props) {
       </FormGroup>
 
       <SubmitButton />
-      <Button type="reset" variant="secondary">{dict.action.reset}</Button>
+      <Button type="reset" variant="secondary">{dict?.action?.reset ?? ""}</Button>
     </BSForm>
   )
 }

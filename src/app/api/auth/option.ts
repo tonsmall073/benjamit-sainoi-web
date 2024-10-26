@@ -37,7 +37,7 @@ export const authOptions: NextAuthOptions = {
         const dict = await getDictionary()
 
         if (!resLogin?.data?.data?.accessToken) {
-          throw new Error(dict.login.message.auth_failed)
+          throw new Error(dict?.login?.message?.auth_failed ?? "")
         }
 
         return {

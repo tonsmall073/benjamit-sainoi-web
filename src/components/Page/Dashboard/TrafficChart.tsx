@@ -28,13 +28,13 @@ export default function TrafficChart() {
     <Line
       data={{
         labels: [
-          dict.dashboard.traffic.chart.xlabel1,
-          dict.dashboard.traffic.chart.xlabel2,
-          dict.dashboard.traffic.chart.xlabel3,
-          dict.dashboard.traffic.chart.xlabel4,
-          dict.dashboard.traffic.chart.xlabel5,
-          dict.dashboard.traffic.chart.xlabel6,
-          dict.dashboard.traffic.chart.xlabel7,
+          dict?.dashboard?.traffic?.chart?.xlabel1 ?? "",
+          dict?.dashboard?.traffic?.chart?.xlabel2 ?? "",
+          dict?.dashboard?.traffic?.chart?.xlabel3 ?? "",
+          dict?.dashboard?.traffic?.chart?.xlabel4 ?? "",
+          dict?.dashboard?.traffic?.chart?.xlabel5 ?? "",
+          dict?.dashboard?.traffic?.chart?.xlabel6 ?? "",
+          dict?.dashboard?.traffic?.chart?.xlabel7 ?? "",
         ],
         datasets: [{
           label: 'My First dataset',

@@ -14,7 +14,7 @@ export default function Summary(props: Props) {
 
   return (
     <div className="col-12 text-center text-sm-start col-sm-auto col-lg mb-3">
-      {dict.pagination.summary
+      {(dict?.pagination?.summary ?? "")
         .replace('{{from}}', from.toString())
         .replace('{{to}}', to.toString())
         .replace('{{total}}', total.toString())}

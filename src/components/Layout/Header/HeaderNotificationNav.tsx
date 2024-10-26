@@ -56,48 +56,48 @@ export default async function HeaderNotificationNav() {
             </Badge>
           </DropdownToggle>
           <DropdownMenu className="pt-0" align="end">
-            <DropdownHeader className="fw-bold rounded-top">{dict.notification.message.replace('{{total}}', '5')}</DropdownHeader>
+            <DropdownHeader className="fw-bold rounded-top">{(dict?.notification?.message ?? "").replace('{{total}}', '5')}</DropdownHeader>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <ItemWithIcon icon={faUserPlus}>
-                  {dict.notification.items.new_user}
+                  {dict?.notification?.items?.new_user ?? ""}
                 </ItemWithIcon>
               </DropdownItem>
             </Link>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <ItemWithIcon icon={faUserMinus}>
-                  {dict.notification.items.deleted_user}
+                  {dict?.notification?.items?.deleted_user ?? ""}
                 </ItemWithIcon>
               </DropdownItem>
             </Link>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <ItemWithIcon icon={faChartBar}>
-                  {dict.notification.items.sales_report}
+                  {dict?.notification?.items?.sales_report ?? ""}
                 </ItemWithIcon>
               </DropdownItem>
             </Link>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <ItemWithIcon icon={faBasketShopping}>
-                  {dict.notification.items.new_client}
+                  {dict?.notification?.items?.new_client ?? ""}
                 </ItemWithIcon>
               </DropdownItem>
             </Link>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <ItemWithIcon icon={faGaugeHigh}>
-                  {dict.notification.items.server_overloaded}
+                  {dict?.notification?.items?.server_overloaded ?? ""}
                 </ItemWithIcon>
               </DropdownItem>
             </Link>
 
-            <DropdownHeader className="fw-bold">{dict.notification.server.title}</DropdownHeader>
+            <DropdownHeader className="fw-bold">{dict?.notification?.server?.title ?? ""}</DropdownHeader>
 
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
-                <small><div className="text-uppercase"><b>{dict.notification.server.items.cpu}</b></div></small>
+                <small><div className="text-uppercase"><b>{dict?.notification?.server?.items?.cpu ?? ""}</b></div></small>
                 <ProgressBar
                   className="progress-thin mt-2"
                   variant="primary"
@@ -106,9 +106,9 @@ export default async function HeaderNotificationNav() {
                 <small>
                   <div className="text-muted">
                     348
-                    {dict.notification.server.processes}
+                    {dict?.notification?.server?.processes ?? ""}
                     . 1/4
-                    {dict.notification.server.cores}
+                    {dict?.notification?.server?.cores ?? ""}
                     .
                   </div>
                 </small>
@@ -116,7 +116,7 @@ export default async function HeaderNotificationNav() {
             </Link>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
-                <small><div className="text-uppercase"><b>{dict.notification.server.items.memory}</b></div></small>
+                <small><div className="text-uppercase"><b>{dict?.notification?.server?.items?.memory ?? ""}</b></div></small>
                 <ProgressBar
                   className="progress-thin mt-2"
                   variant="warning"
@@ -129,7 +129,7 @@ export default async function HeaderNotificationNav() {
             </Link>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
-                <small><div className="text-uppercase"><b>{dict.notification.server.items.ssd1}</b></div></small>
+                <small><div className="text-uppercase"><b>{dict?.notification?.server?.items?.ssd1 ?? ""}</b></div></small>
                 <ProgressBar
                   className="progress-thin mt-2"
                   variant="danger"
@@ -152,12 +152,12 @@ export default async function HeaderNotificationNav() {
             </Badge>
           </DropdownToggle>
           <DropdownMenu className="pt-0" align="end">
-            <DropdownHeader className="fw-bold rounded-top">{dict.task.message.replace('{{total}}', '5')}</DropdownHeader>
+            <DropdownHeader className="fw-bold rounded-top">{(dict?.task?.message ?? "").replace('{{total}}', '5')}</DropdownHeader>
 
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <small className="d-flex">
-                  <div>{dict.task.items.task1}</div>
+                  <div>{dict?.task?.items?.task1 ?? ""}</div>
                   <div className="ms-auto">0%</div>
                 </small>
                 <ProgressBar
@@ -170,7 +170,7 @@ export default async function HeaderNotificationNav() {
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <small className="d-flex">
-                  <div>{dict.task.items.task2}</div>
+                  <div>{dict?.task?.items?.task2 ?? ""}</div>
                   <div className="ms-auto">25%</div>
                 </small>
                 <ProgressBar
@@ -183,7 +183,7 @@ export default async function HeaderNotificationNav() {
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <small className="d-flex">
-                  <div>{dict.task.items.task3}</div>
+                  <div>{dict?.task?.items?.task3 ?? ""}</div>
                   <div className="ms-auto">50%</div>
                 </small>
                 <ProgressBar
@@ -196,7 +196,7 @@ export default async function HeaderNotificationNav() {
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <small className="d-flex">
-                  <div>{dict.task.items.task4}</div>
+                  <div>{dict?.task?.items?.task4 ?? ""}</div>
                   <div className="ms-auto">75%</div>
                 </small>
                 <ProgressBar
@@ -209,7 +209,7 @@ export default async function HeaderNotificationNav() {
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <small className="d-flex">
-                  <div>{dict.task.items.task5}</div>
+                  <div>{dict?.task?.items?.task5 ?? ""}</div>
                   <div className="ms-auto">100%</div>
                 </small>
                 <ProgressBar
@@ -223,7 +223,7 @@ export default async function HeaderNotificationNav() {
             <DropdownDivider />
 
             <Link href="#" passHref legacyBehavior>
-              <DropdownItem className="text-center fw-bold">{dict.task.view_all}</DropdownItem>
+              <DropdownItem className="text-center fw-bold">{dict?.task?.view_all ?? ""}</DropdownItem>
             </Link>
 
           </DropdownMenu>
@@ -238,7 +238,7 @@ export default async function HeaderNotificationNav() {
             </Badge>
           </DropdownToggle>
           <DropdownMenu className="pt-0" align="end">
-            <DropdownHeader className="fw-bold rounded-top">{dict.messages.message.replace('{{total}}', '4')}</DropdownHeader>
+            <DropdownHeader className="fw-bold rounded-top">{(dict?.messages?.message ?? "").replace('{{total}}', '4')}</DropdownHeader>
             <Link href="#" passHref legacyBehavior>
               <DropdownItem>
                 <div className="message">
@@ -256,16 +256,16 @@ export default async function HeaderNotificationNav() {
                     </div>
                   </div>
                   <div>
-                    <small className="text-muted">{dict.messages.items.item1.user}</small>
-                    <small className="text-muted float-end mt-1">{dict.messages.items.item1.time}</small>
+                    <small className="text-muted">{dict?.messages?.items?.item1?.user ?? ""}</small>
+                    <small className="text-muted float-end mt-1">{dict?.messages?.items?.item1?.time ?? ""}</small>
                   </div>
                   <div className="text-truncate font-weight-bold">
                     <span className="text-danger">!</span>
                     {' '}
-                    {dict.messages.items.item1.title}
+                    {dict?.messages?.items?.item1?.title ?? ""}
                   </div>
                   <div className="small text-truncate text-muted">
-                    {dict.messages.items.item1.description}
+                    {dict?.messages?.items?.item1?.description ?? ""}
                   </div>
                 </div>
               </DropdownItem>
@@ -287,14 +287,14 @@ export default async function HeaderNotificationNav() {
                     </div>
                   </div>
                   <div>
-                    <small className="text-muted">{dict.messages.items.item2.user}</small>
-                    <small className="text-muted float-end mt-1">{dict.messages.items.item2.time}</small>
+                    <small className="text-muted">{dict?.messages?.items?.item2?.user ?? ""}</small>
+                    <small className="text-muted float-end mt-1">{dict?.messages?.items?.item2?.time ?? ""}</small>
                   </div>
                   <div className="text-truncate font-weight-bold">
-                    {dict.messages.items.item2.title}
+                    {dict?.messages?.items?.item2?.title ?? ""}
                   </div>
                   <div className="small text-truncate text-muted">
-                    {dict.messages.items.item2.description}
+                    {dict?.messages?.items?.item2?.description ?? ""}
                   </div>
                 </div>
               </DropdownItem>
@@ -316,14 +316,14 @@ export default async function HeaderNotificationNav() {
                     </div>
                   </div>
                   <div>
-                    <small className="text-muted">{dict.messages.items.item3.user}</small>
-                    <small className="text-muted float-end mt-1">{dict.messages.items.item3.time}</small>
+                    <small className="text-muted">{dict?.messages?.items?.item3?.user ?? ""}</small>
+                    <small className="text-muted float-end mt-1">{dict?.messages?.items?.item3?.time ?? ""}</small>
                   </div>
                   <div className="text-truncate font-weight-bold">
-                    {dict.messages.items.item3.title}
+                    {dict?.messages?.items?.item3?.title ?? ""}
                   </div>
                   <div className="small text-truncate text-muted">
-                    {dict.messages.items.item3.description}
+                    {dict?.messages?.items?.item3?.description ?? ""}
                   </div>
                 </div>
               </DropdownItem>
@@ -345,14 +345,14 @@ export default async function HeaderNotificationNav() {
                     </div>
                   </div>
                   <div>
-                    <small className="text-muted">{dict.messages.items.item4.user}</small>
-                    <small className="text-muted float-end mt-1">{dict.messages.items.item4.time}</small>
+                    <small className="text-muted">{dict?.messages?.items?.item4?.user ?? ""}</small>
+                    <small className="text-muted float-end mt-1">{dict?.messages?.items?.item4?.time ?? ""}</small>
                   </div>
                   <div className="text-truncate font-weight-bold">
-                    {dict.messages.items.item4.title}
+                    {dict?.messages?.items?.item4?.title ?? ""}
                   </div>
                   <div className="small text-truncate text-muted">
-                    {dict.messages.items.item4.description}
+                    {dict?.messages?.items?.item4?.description ?? ""}
                   </div>
                 </div>
               </DropdownItem>

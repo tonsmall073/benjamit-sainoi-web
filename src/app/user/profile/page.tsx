@@ -36,7 +36,7 @@ const Page = () => {
 
     return (
         <Card className="mt-5">
-            <Card.Header as="h5">{dict.profile.account.title}</Card.Header>
+            <Card.Header as="h5">{dict?.profile?.account?.title ?? ""}</Card.Header>
             <Card.Body>
                 <MyProfile user={userData} />
             </Card.Body>
