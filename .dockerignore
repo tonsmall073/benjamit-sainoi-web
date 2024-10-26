@@ -1,0 +1,15 @@
+.next
+.git
+.gitignore
+node_modules
+next-env.d.ts
+yarn.lock
+deploy.sh
+deploy.ps1
+deploy.bat
+version.txt
+docker-compose.prod.yml
+docker-compose.staging.yml
+docker-compose.yml
+LICENSE
+

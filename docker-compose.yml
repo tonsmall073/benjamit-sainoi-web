@@ -1,0 +1,17 @@
+version: "4.0"
+
+services:
+  backend:
+    container_name: benjamit_web
+    # build: .
+    image: tonsmall073/benjamitsainoi-frontend:latest
+    ports: 
+      - "3000:3000"
+    networks:
+      - benjamit
+
+    # restart: always
+
+networks:
+  benjamit:
+    external: true
